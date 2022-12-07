@@ -100,10 +100,6 @@ const useFetchUsers = (): FetchData<User[]> => {
             setError({ code: e.code, message: 'This is an error' });
           }
 
-          /**
-           * Should not reach this code since Axios error does not have
-           * the property tag.
-           */
           if (e instanceof Warn) {
             setError(alert);
           }
